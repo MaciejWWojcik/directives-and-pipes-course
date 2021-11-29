@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface User {
   name: string;
@@ -10,21 +10,12 @@ interface User {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  userA: User | undefined;
-  userB: User | undefined;
-  userC: User | undefined;
-  userD: User | undefined;
-
-  ngOnInit() {
-    setTimeout(() => {
-
-      this.userA = { name: 'John Doe', premium: false };
-      this.userB = { name: 'Jane Doe', premium: true };
-      this.userC = undefined;
-      this.userD = { name: '', premium: true };
-
-    }, 10000)
-  }
+  users: User[] = [
+    { name: 'John Doe', premium: false },
+    { name: 'Jane Doe', premium: true },
+    { name: 'Alice Doe', premium: true },
+    { name: 'Bob Doe', premium: true },
+  ];
 }

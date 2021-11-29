@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface User {
+export interface User {
   id: number;
   name: string;
   premium: boolean;
@@ -17,6 +17,6 @@ export class AppComponent {
     { id: 1, name: 'John Doe', premium: false },
     { id: 2, name: 'Jane Doe', premium: true },
     { id: 3, name: 'Alice Doe', premium: true },
-    { id: 4, name: 'Bob Doe', premium: true },
+    { id: 4, name: 'Bob Doe', premium: undefined },
   ];
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 interface User {
+  id: number;
   name: string;
   premium: boolean;
 }
@@ -13,9 +14,9 @@ interface User {
 export class AppComponent {
 
   users: User[] = [
-    { name: 'John Doe', premium: false },
-    { name: 'Jane Doe', premium: true },
-    { name: 'Alice Doe', premium: true },
-    { name: 'Bob Doe', premium: true },
+    { id: 1, name: 'John Doe', premium: false },
+    { id: 2, name: 'Jane Doe', premium: true },
+    { id: 3, name: 'Alice Doe', premium: true },
+    { id: 4, name: 'Bob Doe', premium: true },
   ];
 }

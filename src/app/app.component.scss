@@ -1,0 +1,32 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+  }
+
+  button {
+    padding: 12px 24px;
+    border-radius: 16px;
+    min-width: 100px;
+    margin: 4px;
+    border: none;
+    background-color: #30597c;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

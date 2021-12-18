@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AvatarDirective } from './directives/avatar.directive';
+import { ButtonDirective } from './directives/button.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AvatarDirective
+    ButtonDirective
   ],
   imports: [
     BrowserModule

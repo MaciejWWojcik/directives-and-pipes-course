@@ -1,9 +1,22 @@
 <!--TODO use me to test:-->
-<!--<section *appForRoleOnly="'premium'">-->
-<!--  I'm visible only for premium users-->
-<!--</section>-->
+<!--<div *appForRoles="['basic']"> only for basic users </div>-->
 
 <!--TODO use me to test:-->
-<!--<section *appForRoleOnly="'standard'">-->
-<!--  I'm visible only for standard users-->
-<!--</section>-->
+<!--<div *appForRoles="['premium']"> only for premium users </div>-->
+
+<!--TODO use me to test:-->
+<!--<div *appForRoles="['trial', 'basic']"> for trial and basic users </div>-->
+
+<!--TODO use me to test:-->
+<!--<div *appForRoles="['basic','premium','admin']"> for all users except trial </div>-->
+
+<!--TODO use me to test dynamic data:-->
+<!--<div *appForRoles="roles"> for all users except trial </div>-->
+
+<section class="actions">
+  <button (click)="changeUserRole(UserRole.TrialUser)"> Change user role to: Trial</button>
+  <button (click)="changeUserRole(UserRole.BasicUser)"> Change user role to: Basic</button>
+  <button (click)="changeUserRole(UserRole.PremiumUser)"> Change user role to: Premium</button>
+  <button (click)="changeUserRole(UserRole.Admin)"> Change user role to: Admin</button>
+</section>
+

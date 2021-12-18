@@ -1,5 +1,7 @@
+import { UserRole } from './user-role';
+
 export interface Account {
   username: string;
-  premium: boolean;
+  role: UserRole;
   fullName: string;
 }

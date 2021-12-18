@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ForRoleOnlyDirective } from './directives/for-role-only.directive';
+import { ForRolesDirective } from './directives/for-roles.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ForRoleOnlyDirective,
+    ForRolesDirective,
   ],
   imports: [
     BrowserModule

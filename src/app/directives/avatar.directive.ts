@@ -1,17 +1,17 @@
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appAvatar]'
 })
-export class AvatarDirective implements OnInit {
+export class AvatarDirective implements OnChanges {
 
-  @Input() size: string | undefined;
+  @Input() size: number = 64;
 
   constructor(private elementRef: ElementRef) {
   }
 
-  ngOnInit() {
-    this.elementRef.nativeElement.style.width = this.size;
-    this.elementRef.nativeElement.style.height = this.size;
+  ngOnChanges() {
+    this.elementRef.nativeElement.style.width = this.size + 'px';
+    this.elementRef.nativeElement.style.height = this.size + 'px';
   }
 }

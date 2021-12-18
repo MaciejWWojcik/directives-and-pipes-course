@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HighlightDirective } from './directives/highlight.directive';
+import { PremiumOnlyDirective } from './directives/premium-only.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective,
+    PremiumOnlyDirective,
   ],
   imports: [
     BrowserModule

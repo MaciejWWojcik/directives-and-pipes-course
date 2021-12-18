@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  doSomething() {
 
+  onZoom(zoom: boolean) {
+    zoom ? console.log('zoom in') : console.log('zoom out');
   }
 }

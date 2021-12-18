@@ -7,13 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  value: number = 64;
+  // TODO receive the event and log message in the console
 
-  increase() {
-    this.value = this.value + 4;
-  }
-
-  decrease() {
-    this.value = this.value - 4;
-  }
 }

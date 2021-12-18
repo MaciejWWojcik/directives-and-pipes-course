@@ -1,16 +1,17 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appAvatar]' // TODO update selector so the directive applies only to images
+  selector: '[appAvatar]'
 })
 export class AvatarDirective implements OnInit {
 
-  constructor() {
+  @Input() size: string | undefined;
+
+  constructor(private elementRef: ElementRef) {
   }
 
   ngOnInit() {
-    // TODO set size to 72px x 72px
-    // TODO add yellow, 1px border
-    // TODO round the element, so it is in the shape of the circle
+    this.elementRef.nativeElement.style.width = this.size;
+    this.elementRef.nativeElement.style.height = this.size;
   }
 }

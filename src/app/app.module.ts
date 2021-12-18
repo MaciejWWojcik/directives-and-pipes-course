@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LogClickDirective } from './directives/log-click.directive';
-import { LogHoverDirective } from './directives/log-hover.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LogClickDirective,
-    LogHoverDirective,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule

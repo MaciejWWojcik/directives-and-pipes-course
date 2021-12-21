@@ -1,3 +1,8 @@
+<!-- one-way data binding with simple string -->
 <app-name [name]="'John'"></app-name>
+
+<!-- two one-way data bindings with component's property -->
 <app-name [name]="name" (nameChange)="log($event)"></app-name>
+
+<!-- two-way data binding with the same component's property -->
 <app-name [(name)]="name"></app-name>

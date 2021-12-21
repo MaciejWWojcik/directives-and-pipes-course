@@ -2,6 +2,6 @@
   <li
     *ngFor="let fruit of fruits; let first = first; let last = last;"
     [ngClass]="{'first-element': first, 'last-element': last}">
-    {{ fruit }}
+    <span [innerHTML]="fruit"></span>
   </li>
 </ul>

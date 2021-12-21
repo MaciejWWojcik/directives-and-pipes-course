@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 export interface User {
   id: number;
   name: string;
-  premium: boolean;
+  premium: boolean | undefined;
 }
 
 @Component({

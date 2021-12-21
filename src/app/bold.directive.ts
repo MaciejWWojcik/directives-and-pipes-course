@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appBold]'
+  selector: '[appBold]' // TODO think about different selectors that we can use here
 })
 export class BoldDirective {
 

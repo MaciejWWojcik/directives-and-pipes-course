@@ -3,6 +3,7 @@
     *ngFor="let fruit of fruits; let i = index"
     [ngClass]="i === activeIndex ? 'active': ''"
     (click)="activeIndex = i">
-    {{i}} - {{ fruit }}
+    {{i}}
+    <span [innerHTML]="fruit"></span>
   </li>
 </ul>

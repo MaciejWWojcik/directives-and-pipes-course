@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  template: `<button [ngClass]="buttonClass">Hello</button>`,
+  template: `
+    <button [ngClass]="{'app-button': true, 'button-active':isActive }">Hello</button>`,
 })
 export class ButtonComponent {
-  buttonClass = [
-    'app-button',
-    'button-active'
-  ];
+  @Input() isActive = false;
 }

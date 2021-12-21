@@ -1,0 +1,7 @@
+<section [ngSwitch]="forecast">
+  <p *ngSwitchCase="'sun'" [innerHTML]="sun"></p>
+  <p *ngSwitchCase="'rain'" [innerHTML]="rain"></p>
+  <p *ngSwitchCase="'cloud'" [innerHTML]="cloud"></p>
+  <p *ngSwitchCase="'snow'" [innerHTML]="snow"></p>
+  <p *ngSwitchDefault [innerHTML]="rainbow"></p>
+</section>

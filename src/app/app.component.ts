@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  name: string = 'Bob';
+
+  log(name: string) {
+    console.log('name change event:', name);
+  }
 }

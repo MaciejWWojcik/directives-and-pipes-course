@@ -1,2 +1,3 @@
-<app-text [isBold]="true"></app-text>
-<app-text [isBold]="false"></app-text>
+<app-name [name]="'John'"></app-name>
+<app-name [name]="name" (nameChange)="log($event)"></app-name>
+<app-name [(name)]="name"></app-name>

@@ -8,7 +8,7 @@ export class AccountService {
 
   currentAccount: Account = {
     fullName: 'John Doe',
-    premium: true,
+    premium: false,
     username: 'john-doe'
   }
 }

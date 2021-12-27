@@ -1,3 +1,11 @@
-<section *appPremiumOnly>
+<section *appPremiumOnly="premiumAccount; else nonPremium">
   I'm visible only for premium users
 </section>
+
+<section *appPremiumOnly="nonPremiumAccount; else nonPremium">
+  I'm visible only for premium users
+</section>
+
+<ng-template #nonPremium>
+  <p>Sorry, this function is available for premium users only</p>
+</ng-template>

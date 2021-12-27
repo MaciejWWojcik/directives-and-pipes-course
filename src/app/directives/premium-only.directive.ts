@@ -9,26 +9,32 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import { AccountService } from '../services/account.service';
+import { Account } from '../models/account';
 
 @Directive({
   selector: '[appPremiumOnly]'
 })
 export class PremiumOnlyDirective implements OnInit {
 
+  @Input('appPremiumOnly') account!: Account;
+  @Input('appPremiumOnlyElse') alternativeTemplate?: TemplateRef<any>;
+
   constructor(
     private templateRef: TemplateRef<any>,
     private viewContainerRef: ViewContainerRef,
-    private accountService: AccountService,
   ) {
   }
 
   ngOnInit() {
-    const account = this.accountService.currentAccount;
-
-    if (account.premium) {
+    if (this.account.premium) {
+      this.viewContainerRef.clear();
       this.viewContainerRef.createEmbeddedView(this.templateRef);
     } else {
       this.viewContainerRef.clear();
+
+      if (this.alternativeTemplate) {
+        this.viewContainerRef.createEmbeddedView(this.alternativeTemplate);
+      }
     }
   }
 }

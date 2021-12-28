@@ -15,14 +15,25 @@ import { AccountService } from '../services/account.service';
 })
 export class ForRoleOnlyDirective implements OnInit {
 
-  // TODO get data about user role
+  @Input('appForRoleOnly') role!: 'premium' | 'standard';
 
   constructor(
     private accountService: AccountService,
+    private templateRef: TemplateRef<any>,
+    private viewContainerRef: ViewContainerRef,
   ) {
   }
 
   ngOnInit() {
-    // TODO show element if acceptable role matches user role
+    const account = this.accountService.currentAccount;
+
+    const showForPremium = account.premium && this.role === 'premium';
+    const showForStandard = !account.premium && this.role === 'standard';
+
+    if (showForPremium || showForStandard) {
+      this.viewContainerRef.createEmbeddedView(this.templateRef);
+    } else {
+      this.viewContainerRef.clear();
+    }
   }
 }

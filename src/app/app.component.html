@@ -1,17 +1,14 @@
 <ul>
-  <!--  uncommenting code below will result with an error-->
-  <!--  TODO fix this issue using NgIf directive-->
-
-  <!--  <li>-->
-  <!--    name: {{userA.name}}, premium: {{userA.premium ? 'Yes' : 'No'}}-->
-  <!--  </li>-->
-  <!--  <li>-->
-  <!--    name: {{userB.name}}, premium: {{userB.premium ? 'Yes' : 'No'}}-->
-  <!--  </li>-->
-  <!--  <li>-->
-  <!--    name: {{userC.name}}, premium: {{userC.premium ? 'Yes' : 'No'}}-->
-  <!--  </li>-->
-  <!--  <li>-->
-  <!--    name: {{userD.name}}, premium: {{userD.premium ? 'Yes' : 'No'}}-->
-  <!--  </li>-->
+  <li *ngIf="userA">
+    name: {{userA.name}}, premium: {{userA.premium ? 'Yes' : 'No'}}
+  </li>
+  <li *ngIf="userB">
+    name: {{userB.name}}, premium: {{userB.premium ? 'Yes' : 'No'}}
+  </li>
+  <li *ngIf="userC">
+    name: {{userC.name}}, premium: {{userC.premium ? 'Yes' : 'No'}}
+  </li>
+  <li *ngIf="userD">
+    name: {{userD.name}}, premium: {{userD.premium ? 'Yes' : 'No'}}
+  </li>
 </ul>

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  onHighlight(){
+    console.log('highlight happened')
+  }
 }

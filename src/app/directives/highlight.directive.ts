@@ -1,17 +1,31 @@
-import { Directive, OnInit, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Directive, OnInit, EventEmitter, HostListener, Input, Output, ElementRef, OnChanges } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
-  // TODO get background color data
-  // TODO get optional font color data
+  @Input('appHighlight') color: string = 'green';
+  @Input() fontColor?: string;
 
-  constructor() {
+  @Output() highlight: EventEmitter<void> = new EventEmitter<void>();
+
+  constructor(private elementRef: ElementRef) {
   }
 
-  // TODO update styles: background colour - on mouse over
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.elementRef.nativeElement.style.backgroundColor = this.color;
 
-  // TODO emit values when element is highlighted
+    if (this.fontColor) {
+      this.elementRef.nativeElement.style.backgroundColor = this.fontColor;
+    }
+
+    this.highlight.emit();
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.elementRef.nativeElement.style.backgroundColor = 'transparent';
+  }
 }

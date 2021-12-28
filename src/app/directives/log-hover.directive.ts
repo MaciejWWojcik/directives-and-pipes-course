@@ -1,13 +1,13 @@
-import { Directive } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appLogHover]'
 })
 export class LogHoverDirective {
 
-  constructor() {
+  @HostListener('mouseenter')
+  onClick() {
+    console.log(`action: mouse over - ${Date.now()}`);
   }
-
-  // TODO log to console when user has mouse over this element
 
 }

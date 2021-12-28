@@ -1,11 +1,16 @@
-import { Directive, HostListener } from '@angular/core';
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appLogClick]'
 })
 export class LogClickDirective {
+  @Input('appLogClick') actionName!: string;
 
-  constructor() { }
+  count: number = 0;
 
-  // TODO log to console when user clicks on this element
+  @HostListener('click')
+  onClick() {
+    this.count = this.count + 1;
+    console.log(`action: click - ${Date.now()} - count[${this.count}] - ${this.actionName}`);
+  }
 }

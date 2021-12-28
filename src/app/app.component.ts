@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  // TODO receive the event and log message in the console
-
+  onImageRescale(scaled: boolean) {
+    console.log('image zoom' + scaled ? 'in' : 'out');
+  }
 }

@@ -11,6 +11,11 @@ export class AppComponent {
   email: string = '';
   agreement: boolean = false;
 
+  onEmailChange(email: string) {
+    this.email = email;
+    console.log('email changed: ', this.email);
+  }
+
   onSave() {
     console.log('Data on save: ', this.name, this.email, this.agreement);
   }

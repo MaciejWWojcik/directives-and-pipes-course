@@ -9,22 +9,30 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { UserRole } from '../models/user-role';
 
 @Directive({
   selector: '[appForRoles]'
 })
 export class ForRolesDirective implements OnInit {
 
-  // TODO get data about acceptable roles
+  @Input('appForRoles') allowedRoles!: (UserRole | string)[];
 
   constructor(
-    private accountService: UserService,
+    private userService: UserService,
+    private templateRef: TemplateRef<any>,
+    private viewContainerRef: ViewContainerRef,
   ) {
   }
 
-  // TODO consider using other lifecycle hook if needed:
   ngOnInit() {
-    // TODO show element if acceptable roles matches user role
-    // TODO clear view if user role doesn't match acceptable roles
+    this.userService.userRole$.subscribe(role => {
+      if (this.allowedRoles.includes(role)) {
+        this.viewContainerRef.clear();
+        this.viewContainerRef.createEmbeddedView(this.templateRef);
+      } else {
+        this.viewContainerRef.clear();
+      }
+    })
   }
 }

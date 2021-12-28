@@ -1,18 +1,27 @@
-import { Directive, ElementRef, Input, OnChanges, OnInit } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Directive({
-  selector: '[app]' // TODO update the selector
+  selector: '[appButton]'
 })
 export class ButtonDirective implements OnChanges {
 
-  // TODO get color-mode value
-  // TODO get size value
+  @Input('appButton') color!: 'primary' | 'secondary';
+  @Input() size: number = 120;
 
-  constructor() {
+  constructor(private elementRef: ElementRef) {
   }
 
   ngOnChanges() {
-    // TODO update styles: background color & font color
-    // TODO update size
+    this.elementRef.nativeElement.style.width = `${this.size}px`;
+
+    if (this.color === 'primary') {
+      this.elementRef.nativeElement.style.backgroundColor = 'deepskyblue';
+      this.elementRef.nativeElement.style.color = 'white';
+    }
+
+    if (this.color === 'secondary') {
+      this.elementRef.nativeElement.style.backgroundColor = 'gold';
+      this.elementRef.nativeElement.style.color = 'black';
+    }
   }
 }

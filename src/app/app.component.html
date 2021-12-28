@@ -1,28 +1,24 @@
 <section>
   <span>Red:</span>
   <input type="range" min="0" max="255" value="0" (change)="updateRed($event)">
-  <!-- TODO change background color of this div to match currently selected value of red, like rgb(<value>,0,0)  -->
-  <div>{{red}}</div>
+  <div [ngStyle]="redStyle">{{red}}</div>
 </section>
 
 <section>
   <span>Green:</span>
   <input type="range" min="0" max="255" value="0" (change)="updateGreen($event)">
-  <!-- TODO change background color of this div to match currently selected value of green, like rgb(0,<value>,0)  -->
-  <div>{{green}}</div>
+  <div [ngStyle]="greenStyle">{{green}}</div>
 </section>
 
 <section>
   <span>Blue:</span>
   <input type="range" min="0" max="255" value="0" (change)="updateBlue($event)">
-  <!-- TODO change background color of this div to match currently selected value of blue, like rgb(0,0,<value>)  -->
-  <div>{{blue}}</div>
+  <div [ngStyle]="blueStyle">{{blue}}</div>
 </section>
 
 <hr>
 s
 <section>
   <span>Result:</span>
-  <!-- TODO change background color of this div to match currently selected value of all three colors, like rgb(<red>, <green>, <blue>)  -->
-  <div></div>
+  <div [ngStyle]="resultStyle"></div>
 </section>

@@ -11,21 +11,12 @@ export class ButtonComponent {
   @Input() warn?: boolean;
 
   // getter bound to ngClass in the template
-  get buttonClass(): string[] {
-    let classNames = ['app-button'];
-
-    if (this.warn) {
-      classNames.push('warn-button');
-    } else {
-      // if it's not in warn mode then apply classes according to color mode
-      if (this.color === 'primary') {
-        classNames.push('primary-button');
-      }
-      if (this.color === 'secondary') {
-        classNames.push('secondary-button');
-      }
-    }
-
-    return classNames;
+  get buttonClass(): any {
+    return {
+      'app-button': true,
+      'warn-button': this.warn,
+      'primary-button': !this.warn && this.color === 'primary',
+      'secondary-button': !this.warn && this.color === 'secondary',
+    };
   }
 }

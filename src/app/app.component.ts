@@ -20,7 +20,9 @@ export class AppComponent {
     { id: 4, name: 'Bob Doe', premium: true },
   ];
 
-  //  TODO keep in component's property currently selected user or it's index;
+  selectedUser: User | undefined;
 
-  // TODO implement trackBy functions
+  trackBy(_, user: User) {
+    return user.id;
+  }
 }

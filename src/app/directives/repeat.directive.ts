@@ -14,12 +14,18 @@ import {
 })
 export class RepeatDirective implements OnInit {
 
-  // TODO get amount of elements to render
+  @Input('appRepeat') repeats!: number;
 
-  constructor() {
+  constructor(
+    private templateRef: TemplateRef<any>,
+    private viewContainerRef: ViewContainerRef,
+  ) {
   }
 
   ngOnInit() {
-    // TODO render elements, based on the passed amount
+    this.viewContainerRef.clear();
+    for (let i = 0; i < this.repeats; i++) {
+      this.viewContainerRef.createEmbeddedView(this.templateRef);
+    }
   }
 }

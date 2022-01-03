@@ -1,5 +1,4 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
-import { TextDirective } from './text.directive';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { TextDirective } from './text.directive';
 })
 export class AppComponent {
 
-  @ViewChildren(TextDirective) texts: QueryList<TextDirective> | undefined;
+  // TODO use ViewChild to gather the inputs
 
   array = Array(5).fill(true); // initialize Array of size 5 for NgFor
 
@@ -18,8 +17,7 @@ export class AppComponent {
   }
 
   save() {
-    // map values using the TextDirective API
-    const texts = this.texts?.map(text => text.value);
-    console.log(texts);
+    // TODO get the values
+    // TODO console log the gathered texts
   }
 }

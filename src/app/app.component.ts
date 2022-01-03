@@ -1,4 +1,5 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { CheckboxDirective } from './checkbox.directive';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,13 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 })
 export class AppComponent {
 
-  @ViewChildren('check') checks: QueryList<ElementRef> | undefined;
+  @ViewChildren(CheckboxDirective) checks: QueryList<CheckboxDirective> | undefined;
 
   calculate() {
     let count = 0;
-    this.checks?.forEach(input => {
+    this.checks?.forEach(checkbox => {
       // check if the input is checked
-      if (input.nativeElement.checked === true) {
+      if (checkbox.isChecked) {
         // add 1 to the count
         count = count + 1;
       }

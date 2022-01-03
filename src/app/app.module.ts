@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { CheckboxDirective } from './checkbox.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CheckboxDirective,
   ],
   imports: [
     BrowserModule,

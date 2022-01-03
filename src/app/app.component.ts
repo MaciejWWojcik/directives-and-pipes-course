@@ -1,5 +1,5 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
-import { CheckboxDirective } from './checkbox.directive';
+import { TextDirective } from './text.directive';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +8,18 @@ import { CheckboxDirective } from './checkbox.directive';
 })
 export class AppComponent {
 
-  @ViewChildren(CheckboxDirective) checks: QueryList<CheckboxDirective> | undefined;
+  @ViewChildren(TextDirective) texts: QueryList<TextDirective> | undefined;
 
-  calculate() {
-    let count = 0;
-    this.checks?.forEach(checkbox => {
-      // check if the input is checked
-      if (checkbox.isChecked) {
-        // add 1 to the count
-        count = count + 1;
-      }
-    });
-    console.log(count);
+  array = Array(5).fill(true); // initialize Array of size 5 for NgFor
+
+  addRow(){
+    // add one more row to the array
+    this.array.push(true);
+  }
+
+  save() {
+    // map values using the TextDirective API
+    const texts = this.texts?.map(text => text.value);
+    console.log(texts);
   }
 }

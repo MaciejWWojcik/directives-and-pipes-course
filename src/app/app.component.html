@@ -1,6 +1,4 @@
-<input appCheckbox type="checkbox" [checked]="true"/>
-<input appCheckbox type="checkbox" [checked]="false"/>
-<input appCheckbox type="checkbox" [checked]="false"/>
-<input appCheckbox type="checkbox" [checked]="true"/>
+<input appText type="text" *ngFor="let _ of array"/>
 
-<button (click)="calculate()">check</button>
+<button (click)="addRow()">Add new row</button>
+<button (click)="save()">Save</button>

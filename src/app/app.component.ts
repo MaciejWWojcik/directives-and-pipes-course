@@ -7,8 +7,4 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  faCheck = faCheck;
-
-  save() {
-  }
 }

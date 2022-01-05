@@ -1,13 +1,4 @@
-11:
-<!--TODO uncomment code below to check if the directive work-->
-
-<!--<div *appGreater="11; else small"> I'm greater than 10</div>-->
-<hr>
-9:
-<!--TODO uncomment code below to check if the directive work-->
-
-<!--<div *appGreater="9; else small"> I'm 9, so I will not be rendered!</div>-->
-
-<ng-template #small>
-  <div>I'm smaller than 10</div>
-</ng-template>
+<app-button (click)="save()">
+  Submit
+  <fa-icon [icon]="faCheck"></fa-icon>
+</app-button>

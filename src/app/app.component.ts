@@ -1,4 +1,5 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  faCheck = faCheck;
 
+  save() {
+  }
 }

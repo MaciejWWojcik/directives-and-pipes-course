@@ -5,8 +5,7 @@ import { Directive, ElementRef, Input, OnInit, TemplateRef, ViewContainerRef } f
 })
 export class GreaterDirective implements OnInit {
 
-  @Input('appGreater') value!: number;
-  @Input('appGreaterElse') alternativeTemplate?: TemplateRef<any>;
+  // TODO add input properties
 
   constructor(
     private templateRef: TemplateRef<any>,
@@ -15,18 +14,10 @@ export class GreaterDirective implements OnInit {
   }
 
   ngOnInit() {
-    this.viewContainerRef.clear();
+    // TODO show view if value > 10
 
-    // create view if value > 10
-    if (this.value > 10) {
-      this.viewContainerRef.createEmbeddedView(this.templateRef);
-      return;
-    }
+    // TODO show alternative view if value < 10
 
-    // create alternative view if value < 10
-    if (this.value < 10 && this.alternativeTemplate) {
-      this.viewContainerRef.createEmbeddedView(this.alternativeTemplate);
-      return;
-    }
+    // TODO show nothing if value == 10
   }
 }

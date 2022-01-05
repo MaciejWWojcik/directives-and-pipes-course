@@ -4,11 +4,13 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IconSuffixDirective } from './icon-suffix.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
+    IconSuffixDirective,
   ],
   imports: [
     BrowserModule,

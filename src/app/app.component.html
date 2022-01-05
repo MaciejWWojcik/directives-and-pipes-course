@@ -1,4 +1,13 @@
-<!--TODO add inputs dynamically-->
+<button *ngIf="premiumAccount.premium; else nonPremiumMessage" (click)="doSomething()">
+  Click me! (premium only)
+</button>
 
-<button (click)="addRow()">Add new row</button>
-<button (click)="save()">Save</button>
+<button *ngIf="standardAccount.premium; else nonPremiumMessage" (click)="doSomething()">
+  Click me! (premium only)
+</button>
+
+<ng-template #nonPremiumMessage>
+  <p>
+    Sorry, this function is only available for premium accounts
+  </p>
+</ng-template>

@@ -1,13 +1,9 @@
-<button *ngIf="premiumAccount.premium; else nonPremiumMessage" (click)="doSomething()">
-  Click me! (premium only)
-</button>
+11:
+<div *appGreater="11; else small"> I'm greater than 10</div>
+<hr>
+9:
+<div *appGreater="9; else small"> I'm 9, so I will not be rendered!</div>
 
-<button *ngIf="standardAccount.premium; else nonPremiumMessage" (click)="doSomething()">
-  Click me! (premium only)
-</button>
-
-<ng-template #nonPremiumMessage>
-  <p>
-    Sorry, this function is only available for premium accounts
-  </p>
+<ng-template #small>
+  <div>I'm smaller than 10</div>
 </ng-template>

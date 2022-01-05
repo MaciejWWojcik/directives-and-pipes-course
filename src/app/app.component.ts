@@ -1,5 +1,4 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
-import { Account } from './model/account';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +7,4 @@ import { Account } from './model/account';
 })
 export class AppComponent {
 
-  premiumAccount: Account = {
-    username: 'John',
-    premium: true,
-  }
-
-  standardAccount: Account = {
-    username: 'Jane',
-    premium: false,
-  }
-
-  doSomething() {
-
-  }
 }

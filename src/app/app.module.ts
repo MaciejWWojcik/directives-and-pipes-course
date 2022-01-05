@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { PremiumOnlyDirective } from './premium-only.directive';
+import { GreaterDirective } from './greater.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PremiumOnlyDirective,
+    GreaterDirective,
   ],
   imports: [
     BrowserModule,

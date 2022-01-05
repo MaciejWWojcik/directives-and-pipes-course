@@ -1,14 +1,8 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostBinding, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[iconSuffix]'
+  selector: 'icon-suffix, [iconSuffix]'
 })
-export class IconSuffixDirective implements OnInit {
-
-  constructor(private elementRef: ElementRef) {
-  }
-
-  ngOnInit() {
-    this.elementRef.nativeElement.style.marginLeft = '8px';
-  }
+export class IconSuffixDirective {
+  @HostBinding('class') buttonClass = 'button-icon icon-suffix';
 }

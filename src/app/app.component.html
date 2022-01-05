@@ -1,4 +1,17 @@
 <app-button (click)="save()">
-  Submit
-  <fa-icon [icon]="faCheck" iconSuffix></fa-icon>
+  <button-title>
+    Submit
+  </button-title>
+  <icon-suffix>
+    <fa-icon [icon]="faCheck"></fa-icon>
+  </icon-suffix>
+</app-button>
+
+<app-button (click)="save()">
+  <button-title>
+    Submit
+  </button-title>
+  <icon-prefix>
+    <fa-icon [icon]="faCheck"></fa-icon>
+  </icon-prefix>
 </app-button>

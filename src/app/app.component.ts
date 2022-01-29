@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   onImageRescale(scaled: boolean) {
-    console.log('image zoom' + scaled ? 'in' : 'out');
+    console.log('image zoom' + (scaled ? 'in' : 'out'));
   }
 }

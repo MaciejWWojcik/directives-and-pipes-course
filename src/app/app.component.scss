@@ -5,13 +5,30 @@
 }
 
 section {
-  border: 1px solid green;
+  border: 3px solid green;
   border-radius: 20px;
-  padding: 10px;
+  padding: 16px;
   margin: 10px;
+  max-width: 300px;
 
-  p {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  p, h3, strong {
+    display: block;
     text-align: center;
+  }
+
+  .description {
+    color: #444;
+    text-align: justify;
+  }
+
+  .date {
+    color: #444;
+    font-size: 12px;
   }
 
 }

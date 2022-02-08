@@ -1,15 +1,7 @@
-<section>
+<section *ngFor="let product of products">
   <img [src]="product.image" alt="Image shows {{product.name}}" loading="lazy">
-  <p>{{product.name}}</p>
-  <p>{{product.price}}$</p>
-</section>
-<section>
-  <img [src]="product2.image" alt="Image shows {{product2.name}}" loading="lazy">
-  <p>{{product2.name}}</p>
-  <p>{{product2.price}}$</p>
-</section>
-<section>
-  <img [src]="product3.image" alt="Image shows {{product3.name}}" loading="lazy">
-  <p>{{product3.name}}</p>
-  <p>{{product3.price}}$</p>
+  <h3>{{product.name}}</h3>
+  <strong>{{product.price}}</strong>
+  <p class="description">{{product.description}}</p>
+  <p class="date">added on: {{product.dateOfAdd}}</p>
 </section>

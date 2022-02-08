@@ -8,27 +8,30 @@ import { Product } from './models/product';
 })
 export class AppComponent {
 
-  product: Product = {
-    name: 'Product 1',
-    id: 'p-1',
-    description: 'Product 1 description',
-    image: '/assets/p1.png',
-    price: 110,
-  };
-
-  product2: Product = {
-    name: 'Product 2',
-    id: 'p-2',
-    description: 'Product 2 description',
-    image: '/assets/p2.png',
-    price: 90,
-  };
-
-  product3: Product = {
-    name: 'Product 3',
-    id: 'p-3',
-    description: 'Product 3 description',
-    image: '/assets/p3.png',
-    price: 150,
-  };
+  products: Product[] = [
+    {
+      name: 'Product 1',
+      id: 'p-1',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: '/assets/p1.png',
+      price: 110.00,
+      dateOfAdd: new Date('7/13/2022'),
+    },
+    {
+      name: 'Product 2',
+      id: 'p-2',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: '/assets/p2.png',
+      price: 90.99,
+      dateOfAdd: new Date('12/07/2022'),
+    },
+    {
+      name: 'Product 3',
+      id: 'p-3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      image: '/assets/p3.png',
+      price: 150.55,
+      dateOfAdd: new Date('1/01/2022'),
+    }
+  ];
 }

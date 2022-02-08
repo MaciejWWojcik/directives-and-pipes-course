@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Account, User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  user: User = {
+    name: 'John',
+    lastname: 'Doe',
+    account: Account.Premium,
+  }
 }

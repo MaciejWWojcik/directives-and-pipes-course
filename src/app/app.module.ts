@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { BracketsPipe } from './brackets.pipe';
+import { AccountTypePipe } from './account-type.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BracketsPipe
+    AccountTypePipe,
   ],
   imports: [
     BrowserModule

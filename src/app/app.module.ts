@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ImageDirective } from './directives/image.directive';
+import { BracketsPipe } from './brackets.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImageDirective
+    BracketsPipe
   ],
   imports: [
     BrowserModule

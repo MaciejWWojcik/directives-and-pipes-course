@@ -1,7 +1,4 @@
 <section>
-  <!--  TODO apply fullname pipe here: -->
-  <h1> {{ user.name }} {{user.lastname}} </h1>
-
-  <!--  TODO apply accountType pipe here: -->
-  <h3> {{ user.account }} </h3>
+  <h1> {{ user | fullname }} </h1>
+  <h3> {{ user.account | accountType }} </h3>
 </section>

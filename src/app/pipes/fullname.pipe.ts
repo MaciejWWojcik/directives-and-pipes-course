@@ -6,10 +6,8 @@ import { Account, User } from '../user';
 })
 export class FullNamePipe implements PipeTransform {
 
-  transform(): string {
-    // TODO implement transformation function
-    // TODO return a value that includes both name and lastname of the user
-    return '';
+  transform(user: User): string {
+    return `${user.name} ${user.lastname}`
   }
 
 }

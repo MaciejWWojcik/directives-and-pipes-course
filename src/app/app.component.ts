@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Account, User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,5 @@ import { Account, User } from './user';
 })
 export class AppComponent {
 
-  user: User = {
-    name: 'John',
-    lastname: 'Doe',
-    account: Account.Premium,
-  }
+  dateObject = new Date('6/15/2022');
 }

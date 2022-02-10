@@ -10,7 +10,7 @@ import { UserService } from './user.service';
 })
 export class AppComponent implements OnInit{
 
-  user$: Observable<User> | undefined;
+  // TODO: create a property, to keep Observable of data
 
   constructor(
     private userService: UserService,
@@ -18,8 +18,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    // get user from the service (as Observable)
-    this.user$ = this.userService.getUser();
+    // TODO get user from the service (as Observable)
   }
 
 }

@@ -1,15 +1,23 @@
 <ul>
   <li *ngIf="userA; else loading">
-    name: {{userA.name}}, premium: {{userA.premium ? 'Yes' : 'No'}}
+    <p *ngIf="userA.premium">
+      name: {{userA.name}}, premium: {{userA.premium ? 'Yes' : 'No'}}
+    </p>
   </li>
   <li *ngIf="userB">
-    name: {{userB.name}}, premium: {{userB.premium ? 'Yes' : 'No'}}
+    <p *ngIf="userB.premium">
+      name: {{userB.name}}, premium: {{userB.premium ? 'Yes' : 'No'}}
+    </p>
   </li>
   <li *ngIf="userC">
-    name: {{userC.name}}, premium: {{userC.premium ? 'Yes' : 'No'}}
+    <p *ngIf="userC.premium">
+      name: {{userC.name}}, premium: {{userC.premium ? 'Yes' : 'No'}}
+    </p>
   </li>
   <li *ngIf="userD">
-    name: {{userD.name}}, premium: {{userD.premium ? 'Yes' : 'No'}}
+    <p *ngIf="userD.premium">
+      name: {{userD.name}}, premium: {{userD.premium ? 'Yes' : 'No'}}
+    </p>
   </li>
 </ul>
 

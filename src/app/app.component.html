@@ -1,5 +1,5 @@
 <ul>
-  <li *ngIf="userA">
+  <li *ngIf="userA; else loading">
     name: {{userA.name}}, premium: {{userA.premium ? 'Yes' : 'No'}}
   </li>
   <li *ngIf="userB">
@@ -12,3 +12,5 @@
     name: {{userD.name}}, premium: {{userD.premium ? 'Yes' : 'No'}}
   </li>
 </ul>
+
+<ng-template #loading>Loading...</ng-template>
